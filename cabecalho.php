@@ -20,7 +20,7 @@ include_once("sessao.php");
 	</head>
 	<body>
 		<div id="div_cabecalho">
-			<p>Bem-vindo <b><?php echo $_SESSION['nome']; ?>,</b>
+			<p>Bem-vindo <b><?php echo $_SESSION['nome']; ?>, </b>
 				o seu n&uacute;mero IP &eacute; 
 				<b><?php echo $_SERVER['REMOTE_ADDR'] ?></b>
 				<a href="index.php?logoff">Sair</a>
