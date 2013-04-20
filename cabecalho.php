@@ -6,7 +6,7 @@ include_once("sessao.php");
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Administra&ccedil;&atilde;o do BLOG</title>
+		<title>Administra&ccedil;&atilde;o do BLOG feito em PHP</title>
 		<link rel="stylesheet" type="text/css" href="css/flexigrid.css">
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="js/flexigrid.js"></script>
