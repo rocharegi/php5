@@ -8,7 +8,9 @@
 		<tr>
 			<td>Imagem</td>
 			<td>
-<?php  if($nomeArquivo!="") {
+<?php  
+// recupera informacao do banco para exibir a imagem na tela
+if($nomeArquivo!="") {
 					    	echo '<img src="'.DIR_IMAGENS.'/'.$nomeArquivo.'"
 					    	      width="100" />';
 						} else {

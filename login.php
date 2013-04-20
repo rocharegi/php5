@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
 <?php
 
 ?>
@@ -13,3 +19,5 @@
 <?php
 echo "seu IP &eacute: {$_SERVER['REMOTE_ADDR']}";
 ?>
+</body>
+</html>
