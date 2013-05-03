@@ -16,11 +16,11 @@ foreach ($res as $registro) {
 	echo "<td>".$registro['url']."</td>";
 	echo "<td>".$registro['situacao']."</td>";
 	echo "<td><a href='cadMenu.php?idMenu={$registro['idMenu']}&acao=editar'>
-		  <img src='img/editar.png'></a></td>";
+		  <img src='editar.png'></a></td>";
 	echo "<td><a href='cadMenu.php?idMenu={$registro['idMenu']}&acao=excluir'>
-	      <img src='img/excluir.png'></a></td>";
+	      <img src='excluir.png'></a></td>";
 	echo "<td><a href='cadMenu.php?acao=cadastrar'>
-		  <img src='img/novo.png'></a></td>";
+		  <img src='novo.png'></a></td>";
 	echo "</tr>";
 }
 echo "</table>";
@@ -28,25 +28,26 @@ echo "</table>";
 ?>
 <script type="text/javascript">
 $("#flex1").flexigrid({
-	url: 'post-json.php',
+	url: 'listaMenuBD.php',
 	dataType: 'json',
 	colModel : [
-		{display: 'ISO', name : 'iso', width : 40, sortable : true, align: 'center'},
-		{display: 'Name', name : 'name', width : 180, sortable : true, align: 'left'},
-		{display: 'Printable Name', name : 'printable_name', width : 120, sortable : true, align: 'left'},
-		{display: 'ISO3', name : 'iso3', width : 130, sortable : true, align: 'left', hide: true},
-		{display: 'Number Code', name : 'numcode', width : 80, sortable : true, align: 'right'}
+		{display: 'ID', name : 'idMenu', width : 40, sortable : true, align: 'left'},
+		{display: 'Menu', name : 'nome', width : 180, sortable : true, align: 'left'},
+		{display: 'ID Menu Pai', name : 'idMenuPai', width : 40, sortable : true, align: 'left'},
+		{display: 'URL', name : 'url', width : 130, sortable : true, align: 'left'},
+		{display: 'Situa&ccedil;&atilde;o', name : 'situacao', width : 80, sortable : true, align: 'left'}
 		],
 	searchitems : [
-		{display: 'ISO', name : 'iso'},
-		{display: 'Name', name : 'name', isdefault: true}
+		{display: 'Menu', name : 'nome'},
+		{display: 'ID', name : 'idMenu', isdefault: true}
 		],
-	sortname: "iso",
+	sortname: "idMenu",
 	sortorder: "asc",
 	usepager: true,
-	title: 'Countries',
+	title: 'Cadastro de Menus',
 	useRp: true,
-	rp: 15,
+	rp: 10,
+	rpOptions: [10, 20, 30, 40, 50],
 	showTableToggleBtn: true,
 	width: 700,
 	onSubmit: addFormData,
