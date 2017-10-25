@@ -5,7 +5,7 @@ require_once("funcaoBanco.php");
 if (isset($_REQUEST['acao'])){
 	$acao = $_REQUEST['acao'];
 } else {
-	$acao = "";
+	$acao = "Sem a&ccedil;&atilde;o";
 }
 
 
